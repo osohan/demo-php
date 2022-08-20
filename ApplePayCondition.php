@@ -2,7 +2,7 @@
 
 class ApplePayCondition implements PaymentCondition
 {
-    public function available([] $paymentMethods, InputParams $inputParams)
+    public function filter([] $paymentMethods, InputParams $inputParams)
     {
         if ($inputParams['os'] != 'ios') {
             $paymentMethodsFiltered = [];

@@ -2,7 +2,7 @@
 
 class ExternalNotSupportedCondition implements PaymentCondition
 {
-    public function available([] $paymentMethods, InputParams $inputParams)
+    public function filter([] $paymentMethods, InputParams $inputParams)
     {
         if ($inputParams['productType'] == 'reward' && $inputParams['country'] == 'ES' && $inputParams['amount'] < 0.3) {
             $paymentMethodsFiltered = [];

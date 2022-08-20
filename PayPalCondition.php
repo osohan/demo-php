@@ -2,7 +2,7 @@
 
 class PayPalCondition implements PaymentCondition
 {
-    public function available([] $paymentMethods, InputParams $inputParams)
+    public function filter([] $paymentMethods, InputParams $inputParams)
     {
         if ($inputParams['country'] == 'es' && $inputParams['amount'] < 0.3) {
             $paymentMethodsFiltered = [];

@@ -2,5 +2,5 @@
 
 interface PaymentCondition
 {
-    public function available([] $paymentMethods, InputParams $inputParams);
+    public function filter([] $paymentMethods, InputParams $inputParams);
 }

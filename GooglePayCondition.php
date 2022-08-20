@@ -2,7 +2,7 @@
 
 class GooglePayCondition implements PaymentCondition
 {
-    public function available([] $paymentMethods, InputParams $inputParams)
+    public function filter([] $paymentMethods, InputParams $inputParams)
     {
         if ($inputParams['os'] != 'android' || $inputParams['country'] == 'IN') {
             $paymentMethodsFiltered = [];
